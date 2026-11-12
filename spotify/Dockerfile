@@ -6,7 +6,6 @@ FROM ${BUILD_FROM}
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Setup base
-ARG LIBRESPOT_VERSION="0.8.0"
 # hadolint ignore=DL3003
 RUN \
     apk add --no-cache \
@@ -30,11 +29,12 @@ RUN \
     && export PATH="$HOME/.cargo/bin:$PATH" \
     && cargo install \
         --locked \
+        --git https://github.com/librespot-org/librespot \
+        --rev 15e02e86c72d96dd39d548e3749f00abe39ffdde \
         --no-default-features \
         --features "native-tls pulseaudio-backend with-libmdns" \
         --root /usr \
         --bin librespot \
-        --version "${LIBRESPOT_VERSION}" \
         --verbose \
         -- librespot \
     \

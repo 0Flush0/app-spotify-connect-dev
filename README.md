@@ -1,5 +1,5 @@
 # Home Assistant Community App: Spotify Connect
-
+(Runs on librespot dev branch/Should fix some librespot bugs)
 [![GitHub Release][releases-shield]][releases]
 ![Project Stage][project-stage-shield]
 [![License][license-shield]](LICENSE.md)
@@ -8,9 +8,6 @@
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
-[![Sponsor Frenck via GitHub Sponsors][github-sponsors-shield]][github-sponsors]
-
-[![Support Frenck on Patreon][patreon-shield]][patreon]
 
 Play Spotify music on your Home Assistant device.
 
